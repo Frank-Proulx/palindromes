@@ -7,8 +7,14 @@ describe('Palindrome#search_palindromes') do
   #   expect(palindrome.search_palindromes("pool")).to(eq("loop"))
   # end
   
-  it('will check to see if a word is a palindrome and if it is will return the word') do
-    palindrome = Palindrome.new
-    expect(palindrome.search_palindromes("racecar")).to(eq("racecar"))
-  end
+  # it('will check to see if a word is a palindrome and if it is will return the word') do
+  #   palindrome = Palindrome.new
+  #   expect(palindrome.search_palindromes("racecar")).to(eq("racecar"))
+  # end
+
+  it('will take a string of text and return any palindromes in an array') do
+    palindrome = Palindrome.new("my friend anna drives a racecar")
+    expect(palindrome.search_palindromes()).to(eq(["anna", "racecar"]))
+  end 
+  
 end 

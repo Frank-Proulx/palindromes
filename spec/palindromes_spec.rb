@@ -12,6 +12,11 @@ describe('Palindrome#search_palindromes') do
   #   expect(palindrome.search_palindromes("racecar")).to(eq("racecar"))
   # end
 
+  it('will take a word and return if a palindrome in an array') do
+    palindrome = Palindrome.new("racecar")
+    expect(palindrome.search_palindromes()).to(eq(["racecar"]))
+  end 
+
   it('will take a string of text and return any palindromes in an array') do
     palindrome = Palindrome.new("my friend anna drives a racecar")
     expect(palindrome.search_palindromes()).to(eq(["anna", "racecar"]))
